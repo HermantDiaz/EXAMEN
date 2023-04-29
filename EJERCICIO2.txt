@@ -1,0 +1,51 @@
+package examen;
+
+import java.util.Scanner;
+
+public class ejercicio2 {
+	public static void main(String[] args) {
+		/*2- Realice una arreglo bidimensional que imprima una tabla factura de articulos 
+		segun Nombre_Articulo Precio, cantidad, Total */
+		
+		Scanner sc = new Scanner(System.in);
+		int n;
+
+		System.out.println("**********Programa para factura sencilla ********");
+
+		System.out.println("Ingrese el numeros de articulos a ingresar: ");
+		  n = sc.nextInt();
+		  
+		
+		//declarando datos
+		String Nombres[] = new String[n];
+		double[] precio = new double[n];
+	    double[] cantidad = new double[n];
+	    double[] Total = new double[n];
+	    
+	    
+	  //datos
+	    for (int i=0; i < n; i++){
+
+	        System.out.print("Escriba el nombre del ["+ (i+1) + "] articulo: ");
+	        Nombres[i] = sc.next();
+	        System.out.print("Escriba el precio: ");
+	        precio[i] = sc.nextDouble();
+	        System.out.print("Escriba la cantidad: ");
+	        cantidad[i] = sc.nextDouble();
+
+	    }
+	    
+	    //tabla y operacion
+	    System.out.println();
+	    System.out.printf( "|%13s|%13s|%13s|%13s|%n","Nombre del articulo.", "Precio" , "cantidad" , "Total");
+
+	    for (int i=0; i < n; i++){
+
+	        Total[i] = precio[i] * cantidad[i];
+	        System.out.printf( "|%20s|%13s|%13s|%13s|%n", Nombres[i] , precio[i] , cantidad[i], Total[i]);
+
+	    }
+	    
+	    sc.close();
+	}
+}

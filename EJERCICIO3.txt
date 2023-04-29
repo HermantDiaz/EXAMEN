@@ -1,0 +1,27 @@
+package examen;
+import java.util.Scanner;
+public class ejercicio3 {
+
+	public static void main(String[] args) {
+		// 3- Realice un loguin de Usuario
+		
+		Scanner sc = new Scanner(System.in);
+		String usuario = "admin";
+		String contraseña = "admin";
+		String usuarioleido, contraseñaleida;
+
+		System.out.print("Usuario: ");
+		  usuarioleido = sc.nextLine();
+		System.out.print("Contraseña: ");
+		  contraseñaleida = sc.nextLine();
+		  
+		  if (usuarioleido.equals(usuario) && contraseñaleida.equals(contraseña)) {
+			  
+			  System.out.println("Bienvenido ");
+		  } else {
+			  System.out.println("Usuario o contraseña escritas incorrectamente  ");
+		  }
+		
+	}
+
+}

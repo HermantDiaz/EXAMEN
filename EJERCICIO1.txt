@@ -1,0 +1,79 @@
+package examen;
+
+import java.util.Scanner;
+public class ejercicio1 {
+	public static void main(String[] args) {
+		// 1- Realizar un programa que a traves de de carcacter(Char) realice:
+		// Suma, Resta, Mult, Div.
+		
+		Scanner sc = new Scanner(System.in);
+	    char opcion;
+	    double x,y, respuesta;
+		
+		System.out.println("MENU");
+		System.out.println("+ -> Sumar");
+		System.out.println("- -> Restar");
+		System.out.println("* -> Multiplicar");
+		System.out.println("/ -> Dividir");
+		System.out.print("Escriba una opcion ");
+		 opcion = sc.next().charAt(0);
+		
+		switch (opcion){
+		
+		case '+':
+			System.out.print("Escriba el primer numero: ");
+			 x = sc.nextDouble();
+			 System.out.print("Escriba el segundo numero: ");
+			 y = sc.nextDouble();
+			
+			 respuesta = x +y;
+			 
+			 System.out.println("Su resultado es: " +respuesta);
+			
+			break;
+			
+		case '-':
+			System.out.print("Escriba el primer numero: ");
+			 x = sc.nextDouble();
+			 System.out.print("Escriba el segundo numero: ");
+			 y = sc.nextDouble();
+			
+			 respuesta = x -y;
+			 
+			 System.out.println("Su resultado es: " +respuesta);
+			
+			break;
+			
+		case '*':
+			System.out.print("Escriba el primer numero: ");
+			 x = sc.nextDouble();
+			 System.out.print("Escriba el segundo numero: ");
+			 y = sc.nextDouble();
+			
+			 respuesta = x * y;
+			 
+			 System.out.println("Su resultado es: " +respuesta);
+			
+			break;
+			
+		case '/':
+			System.out.print("Escriba el primer numero: ");
+			 x = sc.nextDouble();
+			 System.out.print("Escriba el segundo numero: ");
+			 y = sc.nextDouble();
+			
+			 respuesta = x / y;
+			 
+			 System.out.println("Su resultado es: " +respuesta);
+			
+			break;
+			
+		default:
+			 System.out.println("Elija una opcion correcta");
+			
+		}
+		
+
+	}
+
+}
